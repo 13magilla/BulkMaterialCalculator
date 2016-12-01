@@ -1,0 +1,7 @@
+span { font-family:monospace; color:#393 }
+span:before { content:"'" }
+span:after { content:"'" }
+
+body {
+    background-color: cyan;
+}

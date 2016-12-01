@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Quantity Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="calc.js"></script>
+    </head>
+    <body>
+        <h1>Bulk Material Estimating Calculator</h1>
+        
+        <h3>Select a calculator</h3>
+        <form onchange="calcUpdateNew()">
+            <input type="radio" name="form" value="1"> Cubic Yards
+            <input type="radio" name="form" value="2"> Tons <br>
+            <input type="radio" name="shape" value="1"> Round
+            <input type="radio" name="shape" value="2"> Rectangle
+        </form><br><br>
+        
+        <!--
+        <select id="calculator" onchange="calcUpdate()">
+            <option disabled selected value> -- select an option -- </option>
+            <option value="yardCalc">Yard Calculator</option>
+            <option value="cubeYardCal">Cubic Yard Calculator</option>
+            <option value="tonCalc">Tonage Calculator</option>
+            <option value="cubeTonCalc">Cubic Tonage Calculator</option>
+        </select><br><br>
+        -->
+        <div id="calcLoc"></div>
+    </body>
+</html>

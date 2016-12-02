@@ -142,7 +142,7 @@ function tonHtml(){
     
     calcOption.innerHTML = '<table id="tonTable">\
                 <tr>\
-                    <th>Material</th>\
+                    <th>Material:</th>\
                     <td>\
                         <select id="material" onchange="tonCalc()">' + materialHtml + '</td>\
                 </tr>\
@@ -175,7 +175,7 @@ function cubeTonHtml(){
     
     calcOption.innerHTML = '<table id="tonTable">\
                 <tr>\
-                    <th>Material</th>\
+                    <th>Material:</th>\
                     <td>\
                         <select id="material" onchange="cubeTonCalc()">' + materialHtml + '</td>\
                 </tr>\

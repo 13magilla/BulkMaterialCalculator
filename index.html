@@ -6,37 +6,34 @@
         <script src="calc.js"></script>
     </head>
     <body>
-        <h1>Bulk Material Estimating Calculator</h1>
-        <p>The following calculator is used to gain an estimate of materials needed to fill an area:</p>
-        <ol id="instructions">
-            <li>Select a unit of measurment</li>
-            <li>Select shape of area to measure</li>
-            <li>Insert data</li>
-        </ol>
-        <form onchange="calcUpdateNew()">
-            <table>
-                <tr>
-                    <th>Unit of measurement:</th>
-                    <td><input type="radio" name="form" value="1" id="cubYard"><label for="cubYard">Cubic Yards</label></td>
-                    <td><input type="radio" name="form" value="2" id="tons"><label for="tons">Tons</label></td>
-                </tr>
-                <tr>
-                    <th>Shape of area:</th>
-                    <td><input type="radio" name="shape" value="2" id="rect"><label for="rect">Rectangle</label></td>
-                    <td><input type="radio" name="shape" value="1" id="round"><label for="round">Round</label></td>
-                </tr>
-            </table>
-        </form><br>
-        <hr/>
-        <!--
-        <select id="calculator" onchange="calcUpdate()">
-            <option disabled selected value> -- select an option -- </option>
-            <option value="yardCalc">Yard Calculator</option>
-            <option value="cubeYardCal">Cubic Yard Calculator</option>
-            <option value="tonCalc">Tonage Calculator</option>
-            <option value="cubeTonCalc">Cubic Tonage Calculator</option>
-        </select><br><br>
-        -->
+        <div id="header">
+            <h1>Bulk Material Estimating Calculator</h1>
+            <p>The following calculator is used to gain an estimate of materials needed to fill an area:</p>
+            <ol id="instructions">
+                <li>Select a unit of measurment</li>
+                <li>Select shape of area to measure</li>
+                <li>Insert data</li>
+            </ol>
+            <form onchange="calcUpdateNew()">
+                <table>
+                    <tr>
+                        <th>Unit of measurement:</th>
+                        <td><input type="radio" name="form" value="1" id="cubYard"><label for="cubYard">Cubic Yards</label></td>
+                        <td><input type="radio" name="form" value="2" id="tons"><label for="tons">Tons</label></td>
+                    </tr>
+                    <tr>
+                        <th>Shape of area:</th>
+                        <td><input type="radio" name="shape" value="2" id="rect"><label for="rect">Rectangle</label></td>
+                        <td><input type="radio" name="shape" value="1" id="round"><label for="round">Round</label></td>
+                    </tr>
+                </table>
+            </form><br>
+            <hr/>
+        </div>
+        
         <div id="calcLoc"></div>
+        <div id="disclaimer">
+            <p>**Disclaimer** This calculator is for estimation purposes only. It is usual and customary to round quantities UP to allow for variations in original grade.</p>
+        </div>
     </body>
 </html>

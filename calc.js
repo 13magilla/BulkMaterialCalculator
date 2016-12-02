@@ -1,11 +1,21 @@
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 
+var myNamespace = {};
+
+myNamespace.round = function(number, precision) {
+    var factor = Math.pow(10, precision);
+    var tempNumber = number * factor;
+    var roundedTempNumber = Math.round(tempNumber);
+    return roundedTempNumber / factor;
+};
+
 function setOneDecimal(sel) {
     if(sel.value < .5){
         sel.value = .5;
     }
-    sel.value = parseFloat(sel.value).toFixed(1);
+    //sel.value = parseFloat(sel.value).toFixed(1);
+    sel.value = myNamespace.round(sel.value, 1);
 }
 
 function calcUpdateNew() {
@@ -83,19 +93,19 @@ function yardHtml(){
     
     calcOption.innerHTML = '<table id="yardTable">\
                 <tr>\
-                    <th>Length (ft)</th>\
+                    <th>Length (ft):</th>\
                     <td>\
                         <input type="number" onchange="setOneDecimal(this); yardCalc();" id="length" value="1" min=".5" step=".1">\
                     </td>\
                 </tr>\
                 <tr>\
-                    <th>Width (ft)</th>\
+                    <th>Width (ft):</th>\
                     <td>\
                         <input type="number" onchange="setOneDecimal(this); yardCalc();" id="width" value="1" min=".5" step=".1">\
                     </td>\
                 </tr>\
                 <tr>\
-                    <th>Depth (in)</th>\
+                    <th>Depth (in):</th>\
                     <td>\
                         <select id="depth" onchange="yardCalc()">'  + depthHtml + '</td>\
                 </tr>\
@@ -112,11 +122,11 @@ function cubeYardHtml(){
     
     calcOption.innerHTML = '<table id="cubeYardCalc">\
                 <tr>\
-                    <th>Diameter (ft)</th>\
+                    <th>Diameter (ft):</th>\
                     <td><input type="number" onchange="setOneDecimal(this); cubeYardCalc();" id="diameter" value="1" min=".5" step=".1"></td>\
                 </tr>\
                 <tr>\
-                    <th>Depth (in)</th>\
+                    <th>Depth (in):</th>\
                     <td>\
                         <select id="depth" onchange="cubeYardCalc()">'  + depthHtml + '</td>\
                 </tr>\
@@ -137,19 +147,19 @@ function tonHtml(){
                         <select id="material" onchange="tonCalc()">' + materialHtml + '</td>\
                 </tr>\
                 <tr>\
-                    <th>Length (ft)</th>\
+                    <th>Length (ft):</th>\
                     <td>\
                         <input type="number" onchange="setOneDecimal(this); tonCalc();" id="length" value="1" min=".5" step=".1">\
                     </td>\
                 </tr>\
                 <tr>\
-                    <th>Width (ft)</th>\
+                    <th>Width (ft):</th>\
                     <td>\
                         <input type="number" onchange="setOneDecimal(this); tonCalc();" id="width" value="1" min=".5" step=".1">\
                     </td>\
                 </tr>\
                 <tr>\
-                    <th>Depth (in)</th>\
+                    <th>Depth (in):</th>\
                     <td>\
                         <select id="depth" onchange="tonCalc()">' + depthHtml + '</td>\
                 </tr>\
@@ -170,13 +180,13 @@ function cubeTonHtml(){
                         <select id="material" onchange="cubeTonCalc()">' + materialHtml + '</td>\
                 </tr>\
                 <tr>\
-                    <th>Diameter (ft)</th>\
+                    <th>Diameter (ft):</th>\
                     <td>\
                         <input type="number" onchange="setOneDecimal(this); cubeTonCalc();" id="diameter" value="1" min=".5" step=".1">\
                     </td>\
                 </tr>\
                 <tr>\
-                    <th>Depth (in)</th>\
+                    <th>Depth (in):</th>\
                     <td>\
                         <select id="depth" onchange="cubeTonCalc()">' + depthHtml + '</td>\
                 </tr>\

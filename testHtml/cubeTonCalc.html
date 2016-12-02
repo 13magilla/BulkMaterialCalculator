@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Quantity Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="calc.js"></script>
+    </head>
+    <body>
+        <div id="calcLoc">
+            <table id="tonTable">
+                <tr>
+                    <th>Material</th>
+                    <td>
+                        <select id="material" onchange="cubeTonCalc()">
+                            <option value="0.6076">Asphalt, crushed</option>
+                            <option value="0.9177">Clay, dry excavated</option>
+                            <option value="1.5388">Clay, wet excavated</option>
+                            <option value="0.9042">Clay, dry lump</option>
+                            <option value="1.3500">Clay, wet lump</option>
+                            <option value="1.4713">Clay, compacted</option>
+                            <option value="0.9312">Coal, Anthracite, broken</option>
+                            <option value="0.7020">Coal, Bituminous, broken</option>
+                            <option value="1.0525">Soil, loam, dry, excavated</option>
+                            <option value="1.2152">Soil, moist, excavated</option>
+                            <option value="1.3500">Soil, wet, excavated</option>
+                            <option value="1.6871">Soil, dense</option>
+                            <option value="1.4579">Soil, soft loose mud</option>
+                            <option value="1.2826">Soil, packed</option>
+                            <option value="1.4174">Gravel, dry 1/4 to 2 inch</option>
+                            <option value="1.6871">Gravel, wet 1/4 to 2 inch</option>
+                            <option value="1.1747">Limestone, pulverized</option>
+                            <option value="1.3500">Rip-Rap</option>
+                            <option value="1.6197">Sand, wet</option>
+                            <option value="1.7545">Sand, wet, packed</option>
+                            <option value="1.3500">Sand, dry</option>
+                            <option value="1.4174">Sand, rammed</option>
+                            <option value="1.1882">Sandstone, crushed</option>
+                            <option value="1.3365">Shale, broken</option>
+                            <option value="1.3500">Stone, crushed</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Diameter (ft)</th>
+                    <td>
+                        <input type="number" onchange="setOneDecimal(this); cubeTonCalc();" id="diameter" value="1" min=".2" step=".1">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Depth (in)</th>
+                    <td>
+                        <select id="depth" onchange="cubeTonCalc()">
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                            <option value="36">36</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Estimated Quantity Needed:</th>
+                    <td id="output"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
